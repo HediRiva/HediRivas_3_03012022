@@ -1,0 +1,10 @@
+// **** bouton générique ****
+.button{
+    padding: 17px 25px;
+    width: max-content;
+    background: linear-gradient(161deg,$colour-secondary 0%, $colour-primary 80%);
+    border-radius: 150px;
+    box-shadow: 1px 10px 16px 0px $box-shadow;
+    color: $white;
+    font-weight: 500;
+}
