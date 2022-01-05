@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
+.method__btn .fa-store, .method__btn .fa-list-ul, .method__btn .fa-mobile-alt {
+  position: absolute;
+  left: 38px;
+  font-size: 21px;
+  color: #8A8A8A;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,14 +16,44 @@ body {
   padding: 0;
 }
 
+h2 {
+  margin-left: 20px;
+}
+
 .button {
   padding: 17px 25px;
   width: max-content;
-  background: linear-gradient(161deg, #FF79DA 0%, #9356DC 80%);
+  background: linear-gradient(161deg, #FF79DA 0%, #9256dc 80%);
   border-radius: 150px;
   box-shadow: 1px 10px 16px 0px rgba(178, 185, 194, 0.75);
   color: #fff;
   font-weight: 500;
+}
+
+.method__btn {
+  width: 87%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  background-color: #eeeeee;
+  padding: 27px 50px;
+  border-radius: 22px;
+  box-shadow: 1px 10px 16px 0px rgba(178, 185, 194, 0.75);
+  justify-content: center;
+  align-items: center;
+}
+.method__btn--number {
+  position: absolute;
+  left: -13px;
+  color: #fff;
+  background-color: #9256dc;
+  border-radius: 150px;
+  padding: 4px 9px;
+}
+.method__btn--text {
+  font-weight: 700;
 }
 
 .logo {
@@ -37,8 +74,8 @@ body {
 }
 .location__info {
   padding: 17px 0;
-  background-color: #e7e7e7;
-  box-shadow: 0px 4px 5px 0px rgba(178, 185, 194, 0.75) inset;
+  background-color: #e0e0e0;
+  box-shadow: 0px 4px 5px 0px inset rgba(178, 185, 194, 0.75);
 }
 .location__info .fa-map-marker-alt {
   position: absolute;
@@ -46,7 +83,7 @@ body {
 }
 .location__text {
   padding: 20px 0 40px 0;
-  background-color: #f7f7f7;
+  background-color: #eeeeee;
 }
 .location__text h1 {
   margin: 0;

@@ -1,11 +1,14 @@
 // **** colours ****
 
-$colour-primary : #9356DC;
+$colour-primary : #9256dc;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
 $white :#fff;
+$grey : #8A8A8A;
+$purple : hsla(267, 72%, 73%, 0.856);
 
-$backcolour-primary : #e7e7e7;
-$backcolour-secondary : #f7f7f7;
+$backcolour-primary : #e0e0e0;
+$backcolour-secondary : #eeeeee;
 
-$box-shadow: rgba(178,185,194,0.75);
+$btn-shadow-size: 1px 10px 16px 0px;
+$btn-shadow-color: rgba(178,185,194,0.75);

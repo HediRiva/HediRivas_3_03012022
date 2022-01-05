@@ -1,10 +1,48 @@
-// **** bouton générique ****
+
 .button{
     padding: 17px 25px;
     width: max-content;
     background: linear-gradient(161deg,$colour-secondary 0%, $colour-primary 80%);
     border-radius: 150px;
-    box-shadow: 1px 10px 16px 0px $box-shadow;
+    @include box-shadow;
     color: $white;
     font-weight: 500;
+}
+
+.method {
+    &__btn {
+        width: 87%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+        position: relative;
+        display: flex;
+        background-color: $backcolour-secondary;
+        padding: 27px 50px;
+        border-radius: 22px;
+        @include box-shadow;
+        justify-content: center;
+        align-items: center;
+            &--number {
+                position: absolute;
+                left: -13px;
+                color: $white;
+                background-color: $colour-primary;
+                border-radius: 150px;
+                padding: 4px 9px;
+            }
+            & .fa-mobile-alt {
+                @extend %icon-btn-method;
+            }
+            & .fa-list-ul {
+                @extend %icon-btn-method;
+            }
+            & .fa-store {
+                @extend %icon-btn-method;
+            }
+            &--text {
+                font-weight: 700;
+            }
+    
+    }
 }
