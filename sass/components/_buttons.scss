@@ -23,6 +23,9 @@
         @include box-shadow;
         justify-content: center;
         align-items: center;
+            &:hover{
+                background-color: $purple;
+            }
             &--number {
                 position: absolute;
                 left: -13px;
@@ -39,6 +42,7 @@
             }
             & .fa-store {
                 @extend %icon-btn-method;
+                font-size: 18px;
             }
             &--text {
                 font-weight: 700;

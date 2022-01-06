@@ -44,6 +44,9 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+.method__btn:hover {
+  background-color: rgba(181, 137, 236, 0.856);
+}
 .method__btn--number {
   position: absolute;
   left: -13px;
@@ -51,6 +54,9 @@ h2 {
   background-color: #9256dc;
   border-radius: 150px;
   padding: 4px 9px;
+}
+.method__btn .fa-store {
+  font-size: 18px;
 }
 .method__btn--text {
   font-weight: 700;
@@ -99,6 +105,57 @@ h2 {
   margin: 35px 0 20px 0;
   margin-left: auto;
   margin-right: auto;
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #eeeeee;
+  margin-top: 70px;
+}
+.restaurant a {
+  text-decoration: none;
+  color: #000000;
+}
+.restaurant__card {
+  position: relative;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  box-shadow: 1px 10px 16px 0px rgba(178, 185, 194, 0.75);
+  border-radius: 15px;
+}
+.restaurant__card--img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  max-height: 70%;
+  border-radius: 15px 15px 0 0;
+}
+.restaurant__card--info {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  padding: 8px 14px;
+  background-color: #99E2D0;
+  color: #278870;
+  width: max-content;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 0.6px;
+  border-radius: 3px;
+}
+.restaurant__card--footer {
+  display: flex;
+}
+.restaurant__card--footer-text {
+  z-index: 3;
 }
 
 /*# sourceMappingURL=style.css.map */

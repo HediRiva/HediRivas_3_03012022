@@ -1,13 +1,4 @@
 // **** page d'acceuil ****
-.logo {
-    width: 160px;
-    margin-left: auto;
-    margin-right: auto;
-        &__pic {
-            max-width: 100%; 
-            padding: 13px 0;
-        }
-}
 
 .location {
     display: flex;
@@ -40,6 +31,59 @@
                 margin: 35px 0 20px 0;
                 margin-left: auto;
                 margin-right: auto;
+            }
+        }
+}
+
+.restaurant {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $backcolour-secondary;
+    margin-top: 70px;
+        & a{
+            text-decoration: none;
+            color: $black;
+        }
+        &__card {
+            position: relative;
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            height: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: $white;
+            @include box-shadow;
+            border-radius: 15px;
+
+            &--img {
+                position: absolute;
+                object-fit: cover;
+                width: 100%;
+                max-height: 70%;
+                border-radius: 15px 15px 0 0;
+            }
+            &--info {
+                position: absolute;
+                right: 20px;
+                top: 15px;
+                padding: 8px 14px;
+                background-color: $colour-tertiary;
+                @include text-info-color;
+                width: max-content;
+                font-weight: 500;
+                font-size: 17px;
+                letter-spacing: .6px;
+                border-radius: 3px;
+            }
+            &--footer {
+                display: flex;
+                
+                &-text {
+                    z-index: 3;
+                }
             }
         }
 }
