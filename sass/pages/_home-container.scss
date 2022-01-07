@@ -51,7 +51,7 @@
             display: flex;
             flex-direction: column;
             width: 90%;
-            height: 250px;
+            height: 270px;
             margin-left: auto;
             margin-right: auto;
             background-color: $white;
@@ -59,17 +59,19 @@
             border-radius: 15px;
 
             &--img {
-                position: absolute;
                 object-fit: cover;
                 width: 100%;
                 max-height: 70%;
                 border-radius: 15px 15px 0 0;
+                &-bis {
+                    height: 225px;
+                }
             }
-            &--info {
+            &--new {
                 position: absolute;
                 right: 20px;
                 top: 15px;
-                padding: 8px 14px;
+                padding: 7px 13px;
                 background-color: $colour-tertiary;
                 @include text-info-color;
                 width: max-content;
@@ -78,12 +80,28 @@
                 letter-spacing: .6px;
                 border-radius: 3px;
             }
-            &--footer {
+            &--info {
                 display: flex;
-                
-                &-text {
-                    z-index: 3;
+                justify-content: space-between;
+                align-items: center;
+                h3,p {
+                    margin: 0;
+                    font-size: 16px;
+                    padding-bottom: 3px;
                 }
+                p {
+                    font-weight: 300;
+                }
+                &-text {
+                    padding: 10px 0 0 12px;
+                }
+                .fa-heart {
+                    font-size: 25px;
+                    padding-right: 20px;
+                    
+                }
+                
             }
         }
 }
+

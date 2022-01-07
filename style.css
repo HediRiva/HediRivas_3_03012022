@@ -30,6 +30,10 @@ h2 {
   font-weight: 500;
 }
 
+.btn__like:hover {
+  background: linear-gradient(5deg, #ff0000 0%, #00ff00 80%);
+}
+
 .method__btn {
   width: 87%;
   margin-right: auto;
@@ -70,6 +74,38 @@ h2 {
 .logo__pic {
   max-width: 100%;
   padding: 13px 0;
+}
+
+.footer {
+  background-color: #363636;
+  color: #fff;
+  width: 100%;
+  height: 220px;
+  padding: 28px 0 0 23px;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer li {
+  padding-bottom: 7px;
+}
+.footer h4 {
+  font-family: "Shrikhand";
+  font-size: 18px;
+  padding-bottom: 19px;
+  margin: 0;
+}
+.footer__icon-text {
+  display: flex;
+  align-items: center;
+}
+.footer__icon-text i {
+  padding-right: 10px;
+}
+.footer__icon-text .fa-hands-helping {
+  font-size: 11px;
 }
 
 .location {
@@ -124,7 +160,7 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 90%;
-  height: 250px;
+  height: 270px;
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
@@ -132,17 +168,19 @@ h2 {
   border-radius: 15px;
 }
 .restaurant__card--img {
-  position: absolute;
   object-fit: cover;
   width: 100%;
   max-height: 70%;
   border-radius: 15px 15px 0 0;
 }
-.restaurant__card--info {
+.restaurant__card--img-bis {
+  height: 225px;
+}
+.restaurant__card--new {
   position: absolute;
   right: 20px;
   top: 15px;
-  padding: 8px 14px;
+  padding: 7px 13px;
   background-color: #99E2D0;
   color: #278870;
   width: max-content;
@@ -151,11 +189,25 @@ h2 {
   letter-spacing: 0.6px;
   border-radius: 3px;
 }
-.restaurant__card--footer {
+.restaurant__card--info {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.restaurant__card--footer-text {
-  z-index: 3;
+.restaurant__card--info h3, .restaurant__card--info p {
+  margin: 0;
+  font-size: 16px;
+  padding-bottom: 3px;
+}
+.restaurant__card--info p {
+  font-weight: 300;
+}
+.restaurant__card--info-text {
+  padding: 10px 0 0 12px;
+}
+.restaurant__card--info .fa-heart {
+  font-size: 25px;
+  padding-right: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
