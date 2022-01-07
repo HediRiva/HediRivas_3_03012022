@@ -20,6 +20,19 @@ h2 {
   margin-left: 20px;
 }
 
+.menu h1 {
+  font-family: "Shrikhand";
+  font-size: 26px;
+  margin: 0;
+}
+.menu__section h2 {
+  font-weight: 300;
+  font-size: 19px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #99E2D0;
+  width: 50px;
+}
+
 .button {
   padding: 17px 25px;
   width: max-content;
@@ -28,10 +41,6 @@ h2 {
   box-shadow: 1px 10px 16px 0px rgba(178, 185, 194, 0.75);
   color: #fff;
   font-weight: 500;
-}
-
-.btn__like:hover {
-  background: linear-gradient(5deg, #ff0000 0%, #00ff00 80%);
 }
 
 .method__btn {
@@ -49,7 +58,7 @@ h2 {
   align-items: center;
 }
 .method__btn:hover {
-  background-color: rgba(181, 137, 236, 0.856);
+  background-color: rgba(181, 137, 236, 0.226);
 }
 .method__btn--number {
   position: absolute;
@@ -75,7 +84,35 @@ h2 {
   max-width: 100%;
   padding: 13px 0;
 }
+.logo .fa-arrow-left {
+  font-size: 19px;
+  position: absolute;
+  left: 20px;
+  top: 17px;
+  color: #000000;
+}
 
+.container img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.menu {
+  position: relative;
+  top: -55px;
+  background-color: #eeeeee;
+  border-radius: 40px 40px 0 0;
+}
+.menu__title {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu__title .fa-heart {
+  font-size: 27px;
+  padding-right: 10px;
+}
 .footer {
   background-color: #363636;
   color: #fff;
@@ -83,29 +120,35 @@ h2 {
   height: 220px;
   padding: 28px 0 0 23px;
 }
-.footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.footer li {
-  padding-bottom: 7px;
-}
 .footer h4 {
   font-family: "Shrikhand";
   font-size: 18px;
   padding-bottom: 19px;
   margin: 0;
 }
-.footer__icon-text {
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 55%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.footer__icon-text i {
+.footer__list .fa-utensils {
+  font-size: 14px;
   padding-right: 10px;
 }
-.footer__icon-text .fa-hands-helping {
+.footer__list .fa-hands-helping {
   font-size: 11px;
+  padding-right: 8px;
+}
+.footer__list a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer__list a:hover {
+  color: #9256dc;
 }
 
 .location {

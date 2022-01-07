@@ -1,0 +1,27 @@
+.container {
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.menu {
+    position: relative;
+    top: -55px;
+    background-color: $backcolour-secondary;
+    border-radius: 40px 40px 0 0;
+    &__title {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .fa-heart {
+            font-size: 27px;
+            padding-right: 10px;
+        }
+        
+    }
+    &__section {
+       
+    }
+}
