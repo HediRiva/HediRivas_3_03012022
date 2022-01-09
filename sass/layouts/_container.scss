@@ -1,8 +1,14 @@
+h2 {
+    margin: 40px 0 20px 20px;
+}
 .container {
     
     img {
         object-fit: cover;
         width: 100%;
+    }
+    .img_2_bis {
+        max-height: 270px;
     }
 }
 
@@ -19,6 +25,7 @@
         .fa-heart {
             font-size: 27px;
             padding-right: 10px;
+            margin-top: 20px;
         }
         
     }
@@ -48,6 +55,3 @@
     }
 }
 
-.size-pic-menu2 {
-    top: -195px;
-}

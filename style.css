@@ -20,14 +20,10 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-h2 {
-  margin: 40px 0 20px 20px;
-}
-
 .menu h1 {
   font-family: "Shrikhand";
   font-size: 27px;
-  margin: 20px 0 10px 0;
+  margin-top: 20px;
 }
 .menu__section h2 {
   font-weight: 300;
@@ -44,6 +40,13 @@ h2 {
   font-weight: 300;
 }
 
+.footer h4 {
+  font-family: "Shrikhand";
+  font-size: 18px;
+  padding-bottom: 19px;
+  margin: 0;
+}
+
 .button {
   padding: 17px 25px;
   width: max-content;
@@ -52,14 +55,11 @@ h2 {
   box-shadow: 1px 10px 16px 0px rgba(178, 185, 194, 0.75);
   color: #fff;
   font-weight: 500;
-}
-
-.container .button {
-  padding: 17px 50px;
   margin-left: auto;
   margin-right: auto;
 }
-.container .btn--order {
+.button__order {
+  padding: 17px 50px;
   margin-bottom: 80px;
 }
 
@@ -112,9 +112,16 @@ h2 {
   color: #000000;
 }
 
+h2 {
+  margin: 40px 0 20px 20px;
+}
+
 .container img {
   object-fit: cover;
   width: 100%;
+}
+.container .img_2_bis {
+  max-height: 270px;
 }
 
 .menu {
@@ -132,6 +139,7 @@ h2 {
 .menu__title .fa-heart {
   font-size: 27px;
   padding-right: 10px;
+  margin-top: 20px;
 }
 .menu__section--card {
   display: flex;
@@ -156,22 +164,12 @@ h2 {
   font-weight: 500;
 }
 
-.size-pic-menu2 {
-  top: -195px;
-}
-
 .footer {
   background-color: #363636;
   color: #fff;
   width: 100%;
   height: 220px;
   padding: 28px 0 0 23px;
-}
-.footer h4 {
-  font-family: "Shrikhand";
-  font-size: 18px;
-  padding-bottom: 19px;
-  margin: 0;
 }
 .footer__list {
   list-style: none;
@@ -239,6 +237,7 @@ h2 {
   width: 100%;
   background-color: #eeeeee;
   margin-top: 70px;
+  padding-bottom: 40px;
 }
 .restaurant a {
   text-decoration: none;
@@ -262,9 +261,7 @@ h2 {
   width: 100%;
   max-height: 70%;
   border-radius: 15px 15px 0 0;
-}
-.restaurant__card--img-bis {
-  height: 225px;
+  max-height: 195px;
 }
 .restaurant__card--new {
   position: absolute;

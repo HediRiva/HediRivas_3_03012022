@@ -41,67 +41,64 @@
     width: 100%;
     background-color: $backcolour-secondary;
     margin-top: 70px;
-        & a{
-            text-decoration: none;
-            color: $black;
-        }
-        &__card {
-            position: relative;
-            margin-bottom: 25px;
-            display: flex;
-            flex-direction: column;
-            width: 90%;
-            height: 270px;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: $white;
-            @include box-shadow;
-            border-radius: 15px;
+    padding-bottom: 40px;
+    & a{
+        text-decoration: none;
+        color: $black;
+    }
+    &__card {
+        position: relative;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 270px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $white;
+        @include box-shadow;
+        border-radius: 15px;
 
-            &--img {
-                object-fit: cover;
-                width: 100%;
-                max-height: 70%;
-                border-radius: 15px 15px 0 0;
-                &-bis {
-                    height: 225px;
-                }
+        &--img {
+            object-fit: cover;
+            width: 100%;
+            max-height: 70%;
+            border-radius: 15px 15px 0 0;
+            max-height: 195px;
+        }
+        &--new {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            padding: 7px 13px;
+            background-color: $colour-tertiary;
+            @include text-info-color;
+            width: max-content;
+            font-weight: 500;
+            font-size: 17px;
+            letter-spacing: .6px;
+            border-radius: 3px;
+        }
+        &--info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h3,p {
+                margin: 0;
+                font-size: 16px;
+                padding-bottom: 3px;
             }
-            &--new {
-                position: absolute;
-                right: 20px;
-                top: 15px;
-                padding: 7px 13px;
-                background-color: $colour-tertiary;
-                @include text-info-color;
-                width: max-content;
-                font-weight: 500;
-                font-size: 17px;
-                letter-spacing: .6px;
-                border-radius: 3px;
+            p {
+                font-weight: 300;
             }
-            &--info {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                h3,p {
-                    margin: 0;
-                    font-size: 16px;
-                    padding-bottom: 3px;
-                }
-                p {
-                    font-weight: 300;
-                }
-                &-text {
-                    padding: 10px 0 0 12px;
-                }
-                .fa-heart {
-                    font-size: 25px;
-                    padding-right: 20px;
-                    
-                }
-                
+            &-text {
+                padding: 10px 0 0 12px;
+            }
+            .fa-heart {
+                font-size: 25px;
+                padding-right: 20px;
             }
         }
+    }
 }
 
