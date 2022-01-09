@@ -1,4 +1,5 @@
 .container {
+    
     img {
         object-fit: cover;
         width: 100%;
@@ -22,6 +23,31 @@
         
     }
     &__section {
-       
+       &--card {
+           display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+           width: 95%;
+           height: 80px;
+           background-color: $white;
+           border-radius: 15px;
+           margin-bottom: 20px;
+           margin-right: auto;
+           margin-left: auto;
+           padding: 14px 0 14px 15px;
+           @include box-shadow;
+           &-txt {
+                display: flex;
+                justify-content: space-between;
+                span {
+                    padding-right: 25px;
+                    font-weight: 500;
+                }
+           }
+       }
     }
+}
+
+.size-pic-menu2 {
+    top: -195px;
 }

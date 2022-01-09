@@ -9,6 +9,16 @@
     font-weight: 500;
 }
 
+.container {
+    .button {
+        padding: 17px 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .btn--order {
+        margin-bottom: 80px;
+    }
+}
 
 .method {
     &__btn {
