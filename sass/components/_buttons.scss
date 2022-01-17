@@ -2,21 +2,18 @@
 .button{
     padding: 17px 25px;
     width: max-content;
-    background: linear-gradient(161deg,$colour-secondary 0%, $colour-primary 80%);
     border-radius: 150px;
+    @include background-btn;
     @include box-shadow;
     color: $white;
     font-weight: 500;
     margin-left: auto;
     margin-right: auto;
     &__order {
+        margin-top: 60px;
         padding: 17px 50px;
-        margin-bottom: 80px;
     }
 }
-
-
-
 
 .method {
     &__btn {
@@ -32,30 +29,30 @@
         @include box-shadow;
         justify-content: center;
         align-items: center;
-            &:hover{
-                background-color: $purple;
-            }
-            &--number {
-                position: absolute;
-                left: -13px;
-                color: $white;
-                background-color: $colour-primary;
-                border-radius: 150px;
-                padding: 4px 9px;
-            }
-            & .fa-mobile-alt {
-                @extend %icon-btn-method;
-            }
-            & .fa-list-ul {
-                @extend %icon-btn-method;
-            }
-            & .fa-store {
-                @extend %icon-btn-method;
-                font-size: 18px;
-            }
-            &--text {
-                font-weight: 700;
-            }
-    
+        &:hover{
+            background-color: $purple;
+        }
+        &--number {
+            position: absolute;
+            left: -13px;
+            color: $white;
+            background-color: $colour-primary;
+            border-radius: 150px;
+            padding: 4px 9px;
+        }
+        & .fa-mobile-alt {
+            @extend %icon-btn-method;
+        }
+        & .fa-list-ul {
+            @extend %icon-btn-method;
+        }
+        & .fa-store {
+            @extend %icon-btn-method;
+            font-size: 18px;
+        }
+        &--text {
+            font-weight: 700;
+        }
     }
 }
+

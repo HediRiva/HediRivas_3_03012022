@@ -2,6 +2,9 @@
 @mixin box-shadow($shadow-size: $btn-shadow-size, $shadow-color: $btn-shadow-color) {
     box-shadow: $shadow-size $shadow-color;
 }
+@mixin background-btn ($deg: $degrees, $colour: $colour-secondary, $colour-2: $colour-primary) {
+    background: linear-gradient($deg, $colour 0%, $colour-2 80%);
+}
 @mixin text-info-color($colour:$colour-tertiary){
     color: darken($colour, 40%);
 }

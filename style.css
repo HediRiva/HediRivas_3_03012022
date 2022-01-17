@@ -50,8 +50,8 @@ h1, h2, h3, h4 {
 .button {
   padding: 17px 25px;
   width: max-content;
-  background: linear-gradient(161deg, #FF79DA 0%, #9256dc 80%);
   border-radius: 150px;
+  background: linear-gradient(161deg, #FF79DA 0%, #9256dc 80%);
   box-shadow: 1px 10px 16px 0px rgba(178, 185, 194, 0.75);
   color: #fff;
   font-weight: 500;
@@ -59,8 +59,8 @@ h1, h2, h3, h4 {
   margin-right: auto;
 }
 .button__order {
+  margin-top: 60px;
   padding: 17px 50px;
-  margin-bottom: 80px;
 }
 
 .method__btn {
@@ -116,6 +116,10 @@ h2 {
   margin: 40px 0 20px 20px;
 }
 
+.container {
+  background-color: #eeeeee;
+  padding-bottom: 30px;
+}
 .container img {
   object-fit: cover;
   width: 100%;
@@ -164,21 +168,50 @@ h2 {
   font-weight: 500;
 }
 
+.progressive_card {
+  animation: fadein 3s;
+}
+.progressive_card--1 {
+  animation-delay: 0s;
+}
+.progressive_card--2 {
+  animation-delay: 0.5s;
+}
+.progressive_card--3 {
+  animation-delay: 1s;
+}
+.progressive_card--4 {
+  animation-delay: 1.5s;
+}
+
+@keyframes fadein {
+  0% {
+    translate: 0 30px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    translate: 0;
+    opacity: 1;
+  }
+}
 .footer {
   background-color: #363636;
   color: #fff;
   width: 100%;
-  height: 220px;
-  padding: 28px 0 0 23px;
+  padding: 28px 0 40px 23px;
 }
 .footer__list {
   list-style: none;
   padding: 0;
   margin: 0;
-  height: 55%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+.footer__list li {
+  padding-bottom: 8px;
 }
 .footer__list .fa-utensils {
   font-size: 14px;
