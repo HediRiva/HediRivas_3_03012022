@@ -31,7 +31,10 @@ h2 {
     }
     &__section {
        &--card {
+           cursor: pointer;
            display: flex;
+           position: relative;
+           overflow: hidden;
            flex-direction: column;
            justify-content: space-between;
            width: 95%;
@@ -43,15 +46,41 @@ h2 {
            margin-left: auto;
            padding: 14px 0 14px 15px;
            @include box-shadow;
+           &:hover .anim-check {
+            transform: translateX(0);
+                .fa-check-circle {
+                    transform: rotate(360deg);
+                }
+            }
            &-txt {
                 display: flex;
                 justify-content: space-between;
-                span {
+                span:first-of-type {
                     padding-right: 25px;
                     font-weight: 500;
                 }
-           }
-       }
+                &-anim {
+                    display: inline-block;
+                    position: absolute;
+                    width: 80px;
+                    background-color: $colour-tertiary;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    transform: translateX(100%);
+                    transition: transform 300ms;
+                }
+                .fa-check-circle {
+                    display: flex;
+                    justify-content: center;
+                    font-size: 26px;
+                    color: $white;
+                    line-height: 80px;
+                    transform: rotate(0deg);
+                    transition: transform 350ms;
+                }
+            }
+        }
     }
 }
 
