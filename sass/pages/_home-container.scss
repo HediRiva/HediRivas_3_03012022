@@ -5,13 +5,23 @@
     flex-direction: column;
     width: 100%;
     text-align: center;
-        &__info {
+        &__form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 17px 0;
             background-color: $backcolour-primary;
             @include box-shadow(0px 4px 5px 0px inset);
             .fa-map-marker-alt{
-                position: absolute;
-                left: 105px;
+                display: inline-block;
+            }
+            &--text {
+                font-size: 20px;
+                text-align: center;
+                width: 30%;
+                border: none;
+                outline: none;
+                background-color: $backcolour-primary;
             }
         }
         &__text {
@@ -40,7 +50,7 @@
     flex-direction: column;
     width: 100%;
     background-color: $backcolour-secondary;
-    margin-top: 70px;
+    margin-top: 20px;
     padding-bottom: 40px;
     & a{
         text-decoration: none;
@@ -58,7 +68,6 @@
         background-color: $white;
         @include box-shadow;
         border-radius: 15px;
-
         &--img {
             object-fit: cover;
             width: 100%;
@@ -94,11 +103,35 @@
             &-text {
                 padding: 10px 0 0 12px;
             }
-            .fa-heart {
-                font-size: 25px;
-                padding-right: 20px;
+            &-heart {
+                .fa-heart {
+                    font-size: 25px;
+                    padding-right: 20px;
+                    
+                }
+                &-empty {
+                    position: absolute;
+                    color: $grey;
+                    transition: opacity 800ms;
+                    cursor: pointer;
+                    z-index: 1;
+                    &:hover {
+                        opacity: 0;
+                        & + .restaurant__card--info-heart-full {
+                            opacity: 1;
+                        }
+                    }
+                }
+                &-full {
+                    position: relative;
+                    @include background-btn(80deg);
+                    background-clip: text;
+                    opacity: 0;
+                    transition: opacity 800ms;
+                }
             }
         }
     }
 }
+
 

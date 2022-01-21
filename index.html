@@ -17,10 +17,10 @@
     </header>
     <main class="container">
         <section class="location">
-            <div class="location__info">
+            <form class="location__form" method="post">
                 <i class="fas fa-map-marker-alt"></i>
-                <div class="location__info--text">Paris, Belleville</div>
-            </div>
+                <input class="location__form--text" type="search" name="ville" placeholder="Paris, Belleville">
+            </form>
             <div class="location__text">
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
@@ -47,7 +47,7 @@
         </section>
         <section class="restaurant">
             <h2>Restaurants</h2>
-            <div class="restaurant__card"><a href="menu_1.html">
+            <div class="restaurant__card"><a href="la_palette_du_goût.html">
                 <img src="images/la_palette.jpg" alt="photo" class="restaurant__card--img">
                 <div class="restaurant__card--new">Nouveau</div>
                 <div class="restaurant__card--info">
@@ -55,12 +55,17 @@
                         <h3>La palette du goût</h3>
                         <p>Ménilmontant</p>
                     </div>
-                    <div class="restaurant__card--info-icon">
-                    <i class="far fa-heart"></i>
-                    </div>
+                    <div class="restaurant__card--info-heart">
+                        <div class="restaurant__card--info-heart-empty">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="restaurant__card--info-heart-full">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div> 
                 </div>    
             </a></div>
-            <div class="restaurant__card"><a href="menu_2.html">
+            <div class="restaurant__card"><a href="la_note_enchantée.html">
                 <img src="images/la_note.jpg" alt="photo" class="restaurant__card--img">
                 <div class="restaurant__card--new">Nouveau</div>
                 <div class="restaurant__card--info">
@@ -68,27 +73,48 @@
                         <h3>La note enchantée</h3>
                         <p>Charonne</p>
                     </div>
-                    <i class="far fa-heart"></i>
+                    <div class="restaurant__card--info-heart">
+                        <div class="restaurant__card--info-heart-empty">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="restaurant__card--info-heart-full">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div> 
                 </div>    
             </a></div>
-            <div class="restaurant__card"><a href="menu_3.html">
+            <div class="restaurant__card"><a href="à_la_française.html">
                 <img src="images/la_franc.jpg" alt="photo" class="restaurant__card--img">
                 <div class="restaurant__card--info">
                     <div class="restaurant__card--info-text">
                         <h3>À la française</h3>
                         <p>Cité Rouge</p>
                     </div>
-                    <i class="far fa-heart"></i>
+                    <div class="restaurant__card--info-heart">
+                        <div class="restaurant__card--info-heart-empty">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="restaurant__card--info-heart-full">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div> 
                 </div>    
             </a></div>
-            <div class="restaurant__card"><a href="menu_4.html">
+            <div class="restaurant__card"><a href="le_délice_des_sens.html">
                 <img src="images/le_délice.jpg" alt="photo" class="restaurant__card--img">
                 <div class="restaurant__card--info">
                     <div class="restaurant__card--info-text">
                         <h3>Le délice des sens</h3>
                         <p>Folie-Méricourt</p>
                     </div>
-                    <i class="far fa-heart"></i>
+                    <div class="restaurant__card--info-heart">
+                        <div class="restaurant__card--info-heart-empty">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="restaurant__card--info-heart-full">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div> 
                 </div>    
             </a></div>
         </section>

@@ -63,6 +63,10 @@ h1, h2, h3, h4 {
   padding: 17px 50px;
 }
 
+.method {
+  background-color: #fff;
+  padding: 10px 0px 40px 0px;
+}
 .method__btn {
   width: 87%;
   margin-right: auto;
@@ -78,7 +82,11 @@ h1, h2, h3, h4 {
   align-items: center;
 }
 .method__btn:hover {
+  cursor: pointer;
   background-color: rgba(181, 137, 236, 0.226);
+}
+.method__btn:hover > .fa-mobile-alt, .method__btn:hover .fa-list-ul, .method__btn:hover .fa-store {
+  color: #9256dc;
 }
 .method__btn--number {
   position: absolute;
@@ -264,14 +272,24 @@ h2 {
   width: 100%;
   text-align: center;
 }
-.location__info {
+.location__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 17px 0;
   background-color: #e0e0e0;
   box-shadow: 0px 4px 5px 0px inset rgba(178, 185, 194, 0.75);
 }
-.location__info .fa-map-marker-alt {
-  position: absolute;
-  left: 105px;
+.location__form .fa-map-marker-alt {
+  display: inline-block;
+}
+.location__form--text {
+  font-size: 20px;
+  text-align: center;
+  width: 30%;
+  border: none;
+  outline: none;
+  background-color: #e0e0e0;
 }
 .location__text {
   padding: 20px 0 40px 0;
@@ -298,7 +316,7 @@ h2 {
   flex-direction: column;
   width: 100%;
   background-color: #eeeeee;
-  margin-top: 70px;
+  margin-top: 20px;
   padding-bottom: 40px;
 }
 .restaurant a {
@@ -354,9 +372,29 @@ h2 {
 .restaurant__card--info-text {
   padding: 10px 0 0 12px;
 }
-.restaurant__card--info .fa-heart {
+.restaurant__card--info-heart .fa-heart {
   font-size: 25px;
   padding-right: 20px;
+}
+.restaurant__card--info-heart-empty {
+  position: absolute;
+  color: #8A8A8A;
+  transition: opacity 800ms;
+  cursor: pointer;
+  z-index: 1;
+}
+.restaurant__card--info-heart-empty:hover {
+  opacity: 0;
+}
+.restaurant__card--info-heart-empty:hover + .restaurant__card--info-heart-full {
+  opacity: 1;
+}
+.restaurant__card--info-heart-full {
+  position: relative;
+  background: linear-gradient(80deg, #FF79DA 0%, #9256dc 80%);
+  background-clip: text;
+  opacity: 0;
+  transition: opacity 800ms;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -16,6 +16,8 @@
 }
 
 .method {
+    background-color: $white;
+    padding: 10px 0px 40px 0px;
     &__btn {
         width: 87%;
         margin-right: auto;
@@ -30,7 +32,11 @@
         justify-content: center;
         align-items: center;
         &:hover{
+            cursor: pointer;
             background-color: $purple;
+            & > .fa-mobile-alt,.fa-list-ul,.fa-store {
+                color: $colour-primary;
+            }
         }
         &--number {
             position: absolute;
