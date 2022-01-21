@@ -5,44 +5,44 @@
     flex-direction: column;
     width: 100%;
     text-align: center;
-        &__form {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 17px 0;
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 17px 0;
+        background-color: $backcolour-primary;
+        @include box-shadow(0px 4px 5px 0px inset);
+        .fa-map-marker-alt{
+            display: inline-block;
+        }
+        &--text {
+            font-size: 20px;
+            text-align: center;
+            width: 45%;
+            border: none;
+            outline: none;
             background-color: $backcolour-primary;
-            @include box-shadow(0px 4px 5px 0px inset);
-            .fa-map-marker-alt{
-                display: inline-block;
-            }
-            &--text {
-                font-size: 20px;
-                text-align: center;
-                width: 30%;
-                border: none;
-                outline: none;
-                background-color: $backcolour-primary;
-            }
         }
-        &__text {
-            padding: 20px 0 40px 0;
-            background-color: $backcolour-secondary;
-            & h1 {
-                margin: 0;
-                padding: 30px 50px 0 50px;
-            }
-            & p {
-                margin: 0;
-                padding: 16px 30px 0 30px;
-                font-size: 17px;
-                font-weight: 300;
-            }
-            &--btn {
-                margin: 35px 0 20px 0;
-                margin-left: auto;
-                margin-right: auto;
-            }
+    }
+    &__text {
+        padding: 20px 0 40px 0;
+        background-color: $backcolour-secondary;
+        & h1 {
+            margin: 0;
+            padding: 30px 50px 0 50px;
         }
+        & p {
+            margin: 0;
+            padding: 16px 30px 0 30px;
+            font-size: 17px;
+            font-weight: 300;
+        }
+        &--btn {
+            margin: 35px 0 20px 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
 
 .restaurant {
@@ -134,4 +134,6 @@
     }
 }
 
+
+// **** loading spinner ****
 
