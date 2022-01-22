@@ -14,3 +14,13 @@
         color: $black;
     }
 }
+
+@media screen and (min-width:768px) {
+      .logo {
+          width: 400px;
+          .fa-arrow-left {
+              margin-top: 10px;
+              font-size: 40px;
+          }
+      }
+}

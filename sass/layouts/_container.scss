@@ -118,6 +118,53 @@ h2 {
 
 
 
+@media screen and (min-width:481px) and (max-width:768px) {
+    .menu {
+        &__title {
+            justify-content: space-between;
+            h1 {
+                margin-left: 40px;
+            }
+            i {
+                margin-right: 40px;
+            }
+        }
+        &__section {
+            h2 {
+                margin-left: 100px;
+            }
+            &--card {
+                width: 70%;
+            }
+        }
+    }      
+}
 
-
+@media screen and (min-width:768px) {
+    .container {
+        & > img {
+            height: 280px;
+        }
+    }
+    .menu {
+        &__title {
+            justify-content: space-around;
+            h1 {
+                margin-left: 40px;
+                font-size: 35px;
+            }
+            i {
+                margin-right: 40px;
+            }
+        }
+        &__section {
+            h2 {
+                margin-left: 100px;
+            }
+            &--card {
+                width: 70%;
+            }
+        }
+    }      
+}
  

@@ -6,6 +6,16 @@
   color: #8A8A8A;
 }
 
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .method__btn .fa-store, .method__btn .fa-list-ul, .method__btn .fa-mobile-alt {
+    left: 100px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .method__btn .fa-store, .method__btn .fa-list-ul, .method__btn .fa-mobile-alt {
+    left: 20px;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -82,7 +92,6 @@ h1, h2, h3, h4 {
   align-items: center;
 }
 .method__btn:hover {
-  cursor: pointer;
   background-color: rgba(181, 137, 236, 0.226);
 }
 .method__btn:hover > .fa-mobile-alt, .method__btn:hover .fa-list-ul, .method__btn:hover .fa-store {
@@ -120,6 +129,15 @@ h1, h2, h3, h4 {
   color: #000000;
 }
 
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 400px;
+  }
+  .logo .fa-arrow-left {
+    margin-top: 10px;
+    font-size: 40px;
+  }
+}
 h2 {
   margin: 40px 0 20px 20px;
 }
@@ -234,6 +252,45 @@ h2 {
     opacity: 1;
   }
 }
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .menu__title {
+    justify-content: space-between;
+  }
+  .menu__title h1 {
+    margin-left: 40px;
+  }
+  .menu__title i {
+    margin-right: 40px;
+  }
+  .menu__section h2 {
+    margin-left: 100px;
+  }
+  .menu__section--card {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container > img {
+    height: 280px;
+  }
+
+  .menu__title {
+    justify-content: space-around;
+  }
+  .menu__title h1 {
+    margin-left: 40px;
+    font-size: 35px;
+  }
+  .menu__title i {
+    margin-right: 40px;
+  }
+  .menu__section h2 {
+    margin-left: 100px;
+  }
+  .menu__section--card {
+    width: 70%;
+  }
+}
 .footer {
   background-color: #363636;
   color: #fff;
@@ -281,7 +338,8 @@ h2 {
   box-shadow: 0px 4px 5px 0px inset rgba(178, 185, 194, 0.75);
 }
 .location__form .fa-map-marker-alt {
-  display: inline-block;
+  display: flex;
+  text-align: center;
 }
 .location__form--text {
   font-size: 20px;
@@ -335,6 +393,12 @@ h2 {
   background-color: #fff;
   box-shadow: 1px 10px 16px 0px rgba(178, 185, 194, 0.75);
   border-radius: 15px;
+  transform: scale(1);
+  transition: transform 600ms;
+}
+.restaurant__card:hover {
+  transform: scale(0.95);
+  box-shadow: 1px 2px 16px 0px #9256dc;
 }
 .restaurant__card--img {
   object-fit: cover;
@@ -391,10 +455,100 @@ h2 {
 }
 .restaurant__card--info-heart-full {
   position: relative;
-  background: linear-gradient(80deg, #FF79DA 0%, #9256dc 80%);
+  background-image: linear-radient(90deg, #9256DC, #FF79DA);
   background-clip: text;
   opacity: 0;
   transition: opacity 800ms;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  h2 {
+    text-align: center;
+    margin: 30px 0px 30px 0px;
+  }
+
+  .method__btn {
+    margin-bottom: 40px;
+  }
+  .method__btn--number {
+    top: -10px;
+    left: 47%;
+  }
+
+  .restaurant h2 {
+    margin-bottom: 40px;
+  }
+  .restaurant__bloc {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .restaurant__bloc-1 {
+    display: flex;
+    justify-content: space-around;
+    margin: 0px 50px 40px 50px;
+  }
+  .restaurant__bloc-2 {
+    display: flex;
+    margin: 0px 50px 0px 50px;
+    justify-content: space-around;
+  }
+  .restaurant__card {
+    width: 45%;
+    height: 230px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .restaurant__card--img {
+    height: 160px;
+  }
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    text-align: center;
+    margin: 30px 0px 30px 0px;
+  }
+
+  .method__bloc {
+    display: flex;
+  }
+  .method__btn {
+    margin-bottom: 40px;
+    width: 30%;
+  }
+  .method__btn--number {
+    top: -10px;
+    left: 47%;
+  }
+  .method__btn--text {
+    text-align: center;
+  }
+
+  .restaurant h2 {
+    margin-bottom: 40px;
+  }
+  .restaurant__bloc {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .restaurant__bloc-1 {
+    display: flex;
+    justify-content: space-around;
+    margin: 0px 50px 40px 50px;
+  }
+  .restaurant__bloc-2 {
+    display: flex;
+    margin: 0px 50px 0px 50px;
+    justify-content: space-around;
+  }
+  .restaurant__card {
+    width: 45%;
+    height: 230px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .restaurant__card--img {
+    height: 160px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

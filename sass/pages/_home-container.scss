@@ -13,7 +13,8 @@
         background-color: $backcolour-primary;
         @include box-shadow(0px 4px 5px 0px inset);
         .fa-map-marker-alt{
-            display: inline-block;
+            display: flex;
+            text-align: center;
         }
         &--text {
             font-size: 20px;
@@ -68,6 +69,12 @@
         background-color: $white;
         @include box-shadow;
         border-radius: 15px;
+        transform: scale(1);
+        transition: transform 600ms;
+        &:hover {
+            transform: scale(.95);
+            @include box-shadow (1px 2px 16px 0px, $colour-primary);
+        }
         &--img {
             object-fit: cover;
             width: 100%;
@@ -124,8 +131,9 @@
                 }
                 &-full {
                     position: relative;
-                    @include background-btn(80deg);
+                    background-image: linear-radient(90deg,#9256DC, #FF79DA);
                     background-clip: text;
+                    // color: transparent;
                     opacity: 0;
                     transition: opacity 800ms;
                 }
@@ -133,6 +141,102 @@
         }
     }
 }
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    h2 {
+        text-align: center;
+        margin: 30px 0px 30px 0px;
+    }
+    .method {
+        &__btn {
+            margin-bottom: 40px;
+            &--number {
+                top: -10px;
+                left: 47%;
+            }
+        }
+    }
+    .restaurant {
+        h2 {
+            margin-bottom: 40px;
+        }
+        &__bloc {
+            margin-right: auto;
+            margin-left: auto;
+            &-1 {
+                display: flex;
+                justify-content: space-around;
+                margin: 0px 50px 40px 50px;
+            }
+            &-2 {
+                display: flex;
+                margin: 0px 50px 0px 50px;
+                justify-content: space-around;
+            }
+        }
+        &__card {
+            width: 45%;
+            height: 230px;
+            margin-right: 0;
+            margin-left: 0;
+            &--img {
+                height: 160px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    h2 {
+        text-align: center;
+        margin: 30px 0px 30px 0px;
+    }
+    .method {
+        &__bloc {
+            display: flex;
+        }
+        &__btn {
+            margin-bottom: 40px;
+            width: 30%;
+            &--number {
+                top: -10px;
+                left: 47%;
+            }
+            &--text {
+                text-align: center;
+            }
+        }
+    }
+    .restaurant {
+        h2 {
+            margin-bottom: 40px;
+        }
+        &__bloc {
+            margin-right: auto;
+            margin-left: auto;
+            &-1 {
+                display: flex;
+                justify-content: space-around;
+                margin: 0px 50px 40px 50px;
+            }
+            &-2 {
+                display: flex;
+                margin: 0px 50px 0px 50px;
+                justify-content: space-around;
+            }
+        }
+        &__card {
+            width: 45%;
+            height: 230px;
+            margin-right: 0;
+            margin-left: 0;
+            &--img {
+                height: 160px;
+            }
+        }
+    }
+}
+
 
 
 // **** loading spinner ****
