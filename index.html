@@ -12,12 +12,12 @@
        
 </head>
 <body>
-    <!-- <div class="spinner">
-        <i class="fas fa-utensils"></i>
-        <i class="fas fa-utensil-spoon"></i>
-        <i class="fas fa-pepper-hot"></i>
-        <i class="fas fa-fish"></i>
-    </div> -->
+    <section class="loading-spinner">
+        <span class="loading-spinner__quart_1 loader_1"></span>
+        <span class="loading-spinner__quart_2 loader_2"></span>
+        <span class="loading-spinner__quart_3 loader_3"></span>
+        <span class="loading-spinner__txt">Chargement ...</span>
+    </section>
     <header class="logo">
         <img src="./images/logo_ohmyfood.png" alt="logo" class="logo__pic">
     </header>
@@ -30,30 +30,36 @@
             <div class="location__text">
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <div class="button location__text--btn">Explorer nos restaurants</div>
+                <a href="#"><div class="button location__text--btn">Explorer nos restaurants</div></a>
             </div>
         </section>
         <section class="method">
             <h2>Fonctionnement</h2>
             <div class="method__bloc">
-                <div class="method__btn">
-                    <div class="method__btn--number">1</div>
-                    <i class="fas fa-mobile-alt"></i>
-                    <div class="method__btn--text">Choisissez un restaurant</div>
-                </div>
-                <div class="method__btn">
-                    <div class="method__btn--number">2</div>
-                    <i class="fas fa-list-ul"></i>
-                    <div class="method__btn--text">Composez votre menu</div>
-                </div>
-                <div class="method__btn">
-                    <div class="method__btn--number">3</div>
-                    <i class="fas fa-store"></i>
-                    <div class="method__btn--text">Dégustez au restaurant</div>
-                </div>
+                <a href="#restaurant">
+                    <div class="method__btn">
+                        <div class="method__btn--number">1</div>
+                        <i class="fas fa-mobile-alt"></i>
+                        <div class="method__btn--text">Choisissez un restaurant</div>   
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="method__btn">
+                        <div class="method__btn--number">2</div>
+                        <i class="fas fa-list-ul"></i>
+                        <div class="method__btn--text">Composez votre menu</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="method__btn">
+                        <div class="method__btn--number">3</div>
+                        <i class="fas fa-store"></i>
+                        <div class="method__btn--text">Dégustez au restaurant</div>
+                    </div>
+                </a>
             </div>
         </section>
-        <section class="restaurant">
+        <section class="restaurant" id="restaurant">
             <h2>Restaurants</h2>
             <div class="restaurant__bloc-1">
                 <div class="restaurant__card"><a href="la_palette_du_goût.html">
@@ -66,10 +72,10 @@
                         </div>
                         <div class="restaurant__card--info-heart">
                             <div class="restaurant__card--info-heart-empty">
-                                <i class="far fa-heart"></i>
+                                <span class="far fa-heart"></span>
                             </div>
                             <div class="restaurant__card--info-heart-full">
-                                <i class="fas fa-heart"></i>
+                                <span class="fas fa-heart"></span>
                             </div>
                         </div> 
                     </div>    

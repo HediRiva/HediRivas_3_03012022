@@ -114,7 +114,6 @@
                 .fa-heart {
                     font-size: 25px;
                     padding-right: 20px;
-                    
                 }
                 &-empty {
                     position: absolute;
@@ -131,12 +130,95 @@
                 }
                 &-full {
                     position: relative;
-                    background-image: linear-radient(90deg,#9256DC, #FF79DA);
+                    @include background-btn(60deg);
                     background-clip: text;
-                    // color: transparent;
+                    color: transparent;
                     opacity: 0;
-                    transition: opacity 800ms;
+                    transition: opacity 960ms;
                 }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    .logo {
+        width: 400px;
+        .fa-arrow-left {
+            margin-top: 10px;
+            font-size: 40px;
+        }
+    }
+    .container {
+        & > img {
+            height: 280px;
+        }
+    }
+    .menu {
+        &__title {
+            justify-content: space-around;
+            h1 {
+                margin-left: 40px;
+                font-size: 35px;
+            }
+            i {
+                margin-right: 40px;
+            }
+        }
+        &__section {
+            h2 {
+                margin-left: 100px;
+            }
+            &--card {
+                width: 70%;
+            }
+        }
+    }    
+    h2 {
+        text-align: center;
+        margin: 30px 0px 30px 0px;
+    }
+    .method {
+        &__bloc {
+            display: flex;
+            justify-content: center;
+        }
+        &__btn {
+            margin-bottom: 40px;
+            margin: 40px;
+            &--number {
+                top: -10px;
+                left: 47%;
+            }
+            &--text {
+                text-align: center;
+            }
+        }
+    }
+    .restaurant {
+        h2 {
+            margin-bottom: 40px;
+        }
+        &__bloc {
+            margin-right: auto;
+            margin-left: auto;
+            &-1 {
+                display: flex;
+                justify-content: space-around;
+                margin: 0px 50px 40px 50px;
+            }
+            &-2 {
+                display: flex;
+                margin: 0px 50px 0px 50px;
+                justify-content: space-around;
+            }
+        }
+        &__card {
+            max-height: 230px;
+            margin-right: 30px;
+            &--img {
+                height: 160px;
             }
         }
     }
@@ -176,7 +258,7 @@
         }
         &__card {
             width: 45%;
-            height: 230px;
+            max-height: 240px;
             margin-right: 0;
             margin-left: 0;
             &--img {
@@ -184,59 +266,29 @@
             }
         }
     }
+    .menu {
+        &__title {
+            justify-content: space-between;
+            h1 {
+                margin-left: 40px;
+            }
+            i {
+                margin-right: 40px;
+            }
+        }
+        &__section {
+            h2 {
+                margin-left: 100px;
+            }
+            &--card {
+                width: 70%;
+            }
+        }
+    }      
 }
 
-@media screen and (min-width:768px) {
-    h2 {
-        text-align: center;
-        margin: 30px 0px 30px 0px;
-    }
-    .method {
-        &__bloc {
-            display: flex;
-        }
-        &__btn {
-            margin-bottom: 40px;
-            width: 30%;
-            &--number {
-                top: -10px;
-                left: 47%;
-            }
-            &--text {
-                text-align: center;
-            }
-        }
-    }
-    .restaurant {
-        h2 {
-            margin-bottom: 40px;
-        }
-        &__bloc {
-            margin-right: auto;
-            margin-left: auto;
-            &-1 {
-                display: flex;
-                justify-content: space-around;
-                margin: 0px 50px 40px 50px;
-            }
-            &-2 {
-                display: flex;
-                margin: 0px 50px 0px 50px;
-                justify-content: space-around;
-            }
-        }
-        &__card {
-            width: 45%;
-            height: 230px;
-            margin-right: 0;
-            margin-left: 0;
-            &--img {
-                height: 160px;
-            }
-        }
-    }
-}
 
+ 
 
 
 // **** loading spinner ****

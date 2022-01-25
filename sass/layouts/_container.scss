@@ -46,10 +46,18 @@ h2 {
            margin-left: auto;
            padding: 14px 0 14px 15px;
            @include box-shadow;
-           &:hover .anim-check {
-            transform: translateX(0);
+           &:hover {
+                .anim-check {
+                    transform: translateX(0);
+                }
                 .fa-check-circle {
                     transform: rotate(360deg);
+                }
+                span:first-of-type {
+                    transform: translateX(-80px);
+                }
+                p {
+                    text-overflow: ellipsis;
                 }
             }
            &-txt {
@@ -58,9 +66,16 @@ h2 {
                 span:first-of-type {
                     padding-right: 25px;
                     font-weight: 500;
+                    transform: translateX(0);
+                    transition: 300ms 50ms; 
+                }
+                p {
+                    width: 260px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    direction: ltr;
                 }
                 &-anim {
-                    display: inline-block;
                     position: absolute;
                     width: 80px;
                     background-color: $colour-tertiary;
@@ -115,56 +130,3 @@ h2 {
         opacity: 1;
     }
 }
-
-
-
-@media screen and (min-width:481px) and (max-width:768px) {
-    .menu {
-        &__title {
-            justify-content: space-between;
-            h1 {
-                margin-left: 40px;
-            }
-            i {
-                margin-right: 40px;
-            }
-        }
-        &__section {
-            h2 {
-                margin-left: 100px;
-            }
-            &--card {
-                width: 70%;
-            }
-        }
-    }      
-}
-
-@media screen and (min-width:768px) {
-    .container {
-        & > img {
-            height: 280px;
-        }
-    }
-    .menu {
-        &__title {
-            justify-content: space-around;
-            h1 {
-                margin-left: 40px;
-                font-size: 35px;
-            }
-            i {
-                margin-right: 40px;
-            }
-        }
-        &__section {
-            h2 {
-                margin-left: 100px;
-            }
-            &--card {
-                width: 70%;
-            }
-        }
-    }      
-}
- 

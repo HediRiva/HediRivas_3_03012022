@@ -5,6 +5,24 @@
     font-size: 21px;
     color: $grey;
 }
+%quart {
+    border-radius: 70px;
+    border: 9px solid rgba(255,255,255,0.4);
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -9px;
+        border-radius: 70px;
+        border: 9px solid transparent;
+        border-top-color: $white;
+        -webkit-animation: spin 1.1s linear infinite;
+                animation: spin 1.1s linear infinite;
+    }
+}
+%loader {
+    position: absolute;
+    display: inline-block;
+}
 
 @media screen and (min-width:481px) and (max-width:768px) {
     %icon-btn-method {

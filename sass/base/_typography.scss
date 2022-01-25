@@ -3,7 +3,7 @@
 
 .menu {
     h1 {
-        font-family: 'Shrikhand';
+        font-family: $font;
         font-size: 27px;
         margin-top: 20px;
        
@@ -29,7 +29,7 @@
 
 .footer {
     h4 {
-        font-family: 'Shrikhand';
+        font-family: $font;
         font-size: 18px;
         padding-bottom: 19px;
         margin: 0;

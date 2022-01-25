@@ -1,0 +1,87 @@
+
+.loading-spinner {
+    background-color: $dark_grey;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    line-height: 800px;
+    opacity: 0.9;
+    color: $white;
+    font-size: 40px;
+    font-family: $font;
+    text-align: center;
+    animation: loader-end 3s 1.7s forwards;
+    &__quart_1 {
+        @extend %quart;
+        border: 9px solid $colour-primary;
+    }
+    &__quart_2 {
+       @extend %quart;
+       border: 9px solid $colour-secondary;
+    }
+    &__quart_3 {
+        @extend %quart;
+        border: 9px solid $colour-tertiary;
+    }
+    &__txt {
+        @include background-btn(65deg);
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.loader{
+    &_1 {
+        @extend %loader;
+        width: 50px;
+        height: 50px;
+        left: 210px;
+        top: 160px;
+        
+    }
+    &_2 {
+        @extend %loader;
+        width: 75px;
+        height: 75px;
+        left: 260px;
+        top: 200px;
+    }
+    &_3 {
+        @extend %loader;
+        width: 100px;
+        height: 100px;
+        left: 190px;
+        top: 270px;
+    }
+}
+
+
+@-webkit-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-end {
+    0% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
