@@ -11,7 +11,8 @@
     font-size: 40px;
     font-family: $font;
     text-align: center;
-    animation: loader-end 3s 1.7s forwards;
+    -webkit-animation: loader-end 3s 1.7s forwards;
+            animation: loader-end 3s 1.7s forwards;
     &__quart_1 {
         @extend %quart;
         border: 9px solid $colour-primary;
@@ -26,7 +27,8 @@
     }
     &__txt {
         @include background-btn(65deg);
-        background-clip: text;
+        -webkit-background-clip: text;
+                background-clip: text;
         color: transparent;
     }
 }
@@ -76,6 +78,16 @@
     }
 }
 
+@-webkit-keyframes loader-end {
+    0% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
 @keyframes loader-end {
     0% {
         opacity: 0.9;
@@ -84,4 +96,41 @@
         opacity: 0;
         z-index: 0;
     }
+}
+
+@media screen and (min-width:768px) {
+    .loader{
+        &_1 {
+            left: 560px;
+            top: 160px;
+            
+        }
+        &_2 {
+            left: 610px;
+            top: 200px;
+        }
+        &_3 {
+            left: 540px;
+            top: 270px;
+        }
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .loader{
+        &_1 {
+            left: 400px;
+            top: 160px;
+            
+        }
+        &_2 {
+            left: 460px;
+            top: 200px;
+        }
+        &_3 {
+            left: 380px;
+            top: 270px;
+        }
+    }
+
 }

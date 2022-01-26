@@ -23,10 +23,33 @@ h2 {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        .fa-heart {
-            font-size: 27px;
-            padding-right: 10px;
-            margin-top: 20px;
+        &--heart {
+            .fa-heart {
+                font-size: 27px;
+                padding-right: 10px;
+                margin-top: 20px;
+            }
+            &-empty {
+                position: absolute;
+                color: $grey;
+                transition: opacity 800ms;
+                cursor: pointer;
+                z-index: 1;
+                &:hover {
+                    opacity: 0;
+                    & + .menu__title--heart-full {
+                        opacity: 1;
+                    }
+                }
+            }
+            &-full {
+                position: relative;
+                @include background-btn(60deg);
+                background-clip: text;
+                color: transparent;
+                opacity: 0;
+                transition: opacity 960ms;
+            }
         }
     }
     &__section {
@@ -34,7 +57,9 @@ h2 {
            cursor: pointer;
            display: flex;
            position: relative;
+           text-overflow: ellipsis;
            overflow: hidden;
+           white-space: nowrap;
            flex-direction: column;
            justify-content: space-between;
            width: 95%;
@@ -56,24 +81,26 @@ h2 {
                 span:first-of-type {
                     transform: translateX(-80px);
                 }
-                p {
+                h3, p {
                     text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
                 }
             }
            &-txt {
                 display: flex;
                 justify-content: space-between;
+                h3, p {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
                 span:first-of-type {
                     padding-right: 25px;
+                    padding-left: 25px;
                     font-weight: 500;
                     transform: translateX(0);
                     transition: 300ms 50ms; 
-                }
-                p {
-                    width: 260px;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    direction: ltr;
                 }
                 &-anim {
                     position: absolute;
@@ -98,6 +125,8 @@ h2 {
         }
     }
 }
+
+
 
 // *** animation menu ***
 
