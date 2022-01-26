@@ -1,6 +1,8 @@
 
 .button{
     padding: 17px 25px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     border-radius: 150px;
     @include background-btn;

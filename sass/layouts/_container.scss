@@ -5,7 +5,8 @@ h2 {
     background-color: $backcolour-secondary;
     padding-bottom: 30px;
     img {
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         width: 100%;
     }
     .img_2_bis {
@@ -45,7 +46,8 @@ h2 {
             &-full {
                 position: relative;
                 @include background-btn(60deg);
-                background-clip: text;
+                -webkit-background-clip: text;
+                        background-clip: text;
                 color: transparent;
                 opacity: 0;
                 transition: opacity 960ms;
@@ -131,22 +133,27 @@ h2 {
 // *** animation menu ***
 
 .progressive_card {
-    animation: fadein 3s;
+    -webkit-animation: fadein 3s;
+            animation: fadein 3s;
     &--1 {
-        animation-delay: 0s;
+        -webkit-animation-delay: 0s;
+                animation-delay: 0s;
     }
     &--2 {
-        animation-delay: 0.5s;
+        -webkit-animation-delay: 0.5s;
+                animation-delay: 0.5s;
     }
     &--3 {
-        animation-delay: 1s;
+        -webkit-animation-delay: 1s;
+                animation-delay: 1s;
     }
     &--4 {
-        animation-delay: 1.5s;
+        -webkit-animation-delay: 1.5s;
+                animation-delay: 1.5s;
     }
 }
 
-@keyframes fadein {
+@-webkit-keyframes fadein {
     0% {
         translate: 0 30px;
         opacity: 0;
@@ -156,6 +163,20 @@ h2 {
     }
     100% {
         translate: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        transform: translate(0 30px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(0);
         opacity: 1;
     }
 }

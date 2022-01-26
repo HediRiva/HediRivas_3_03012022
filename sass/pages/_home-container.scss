@@ -83,7 +83,8 @@
             @include box-shadow (1px 2px 16px 0px, $colour-tertiary);
         }
         &--img {
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
             width: 100%;
             max-height: 70%;
             border-radius: 15px 15px 0 0;
@@ -96,6 +97,8 @@
             padding: 7px 13px;
             background-color: $colour-tertiary;
             @include text-info-color;
+            width: -webkit-max-content;
+            width: -moz-max-content;
             width: max-content;
             font-weight: 500;
             font-size: 17px;
@@ -138,7 +141,8 @@
                 &-full {
                     position: relative;
                     @include background-btn(60deg);
-                    background-clip: text;
+                    -webkit-background-clip: text;
+                            background-clip: text;
                     color: transparent;
                     opacity: 0;
                     transition: opacity 960ms;
