@@ -55,15 +55,16 @@ h2 {
         }
     }
     &__section {
-       &--card {
+        &--title {
+            animation: fadein 850ms ease-in-out backwards;
+        }
+        &--card {
            cursor: pointer;
            display: flex;
            position: relative;
-           text-overflow: ellipsis;
-           overflow: hidden;
-           white-space: nowrap;
            flex-direction: column;
            justify-content: space-between;
+           overflow: hidden;
            width: 95%;
            height: 80px;
            background-color: $white;
@@ -73,36 +74,35 @@ h2 {
            margin-left: auto;
            padding: 14px 0 14px 15px;
            @include box-shadow;
+           &-title {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+           }
            &:hover {
                 .anim-check {
                     transform: translateX(0);
                 }
                 .fa-check-circle {
-                    transform: rotate(360deg);
+                    transform: rotate(3turn);
                 }
-                span:first-of-type {
+                .menu__section--card-txt-price {
                     transform: translateX(-80px);
-                }
-                h3, p {
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
                 }
             }
            &-txt {
                 display: flex;
                 justify-content: space-between;
-                h3, p {
-                    text-overflow: ellipsis;
+                &-name {
                     overflow: hidden;
                     white-space: nowrap;
+                    text-overflow: ellipsis;
                 }
-                span:first-of-type {
-                    padding-right: 25px;
-                    padding-left: 25px;
+                &-price {
+                    padding: 0 15px 0 15px;
                     font-weight: 500;
                     transform: translateX(0);
-                    transition: 300ms 50ms; 
+                    transition: 300ms 50ms;
                 }
                 &-anim {
                     position: absolute;
@@ -133,8 +133,10 @@ h2 {
 // *** animation menu ***
 
 .progressive_card {
-    -webkit-animation: fadein 3s;
-            animation: fadein 3s;
+    
+-webkit-animation: fadein 850ms ease-in-out backwards;
+
+        animation: fadein 850ms ease-in-out backwards;
     &--1 {
         -webkit-animation-delay: 0s;
                 animation-delay: 0s;
@@ -153,30 +155,28 @@ h2 {
     }
 }
 
+
+
 @-webkit-keyframes fadein {
     0% {
-        translate: 0 30px;
+        transform: translateY(30px);
         opacity: 0;
     }
-    50% {
-        opacity: 0.5;
-    }
     100% {
-        translate: 0;
+        transform: translateY(0);
         opacity: 1;
     }
 }
 
+
+
 @keyframes fadein {
     0% {
-        transform: translate(0 30px);
+        transform: translateY(30px);
         opacity: 0;
     }
-    50% {
-        opacity: 0.5;
-    }
     100% {
-        transform: translate(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }

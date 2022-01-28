@@ -57,10 +57,19 @@ a {
   color: black;
 }
 
+span {
+  display: inline-block;
+}
+
 .menu h1 {
   font-family: "Shrikhand";
   font-size: 27px;
   margin-top: 20px;
+}
+.menu__section--card-txt-name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
 }
 .menu__section h2 {
   font-weight: 300;
@@ -70,11 +79,6 @@ a {
   width: 50px;
   margin: 40px 0 20px 17px;
   padding-bottom: 6px;
-}
-.menu__section p {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 300;
 }
 
 .footer h4 {
@@ -223,15 +227,16 @@ h2 {
   opacity: 0;
   transition: opacity 960ms;
 }
+.menu__section--title {
+  animation: fadein 850ms ease-in-out backwards;
+}
 .menu__section--card {
   cursor: pointer;
   display: flex;
   position: relative;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
   width: 95%;
   height: 80px;
   background-color: #fff;
@@ -242,32 +247,31 @@ h2 {
   padding: 14px 0 14px 15px;
   box-shadow: 1px 10px 16px 0px rgba(178, 185, 194, 0.75);
 }
+.menu__section--card-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .menu__section--card:hover .anim-check {
   transform: translateX(0);
 }
 .menu__section--card:hover .fa-check-circle {
-  transform: rotate(360deg);
+  transform: rotate(3turn);
 }
-.menu__section--card:hover span:first-of-type {
+.menu__section--card:hover .menu__section--card-txt-price {
   transform: translateX(-80px);
-}
-.menu__section--card:hover h3, .menu__section--card:hover p {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 .menu__section--card-txt {
   display: flex;
   justify-content: space-between;
 }
-.menu__section--card-txt h3, .menu__section--card-txt p {
-  text-overflow: ellipsis;
+.menu__section--card-txt-name {
   overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.menu__section--card-txt span:first-of-type {
-  padding-right: 25px;
-  padding-left: 25px;
+.menu__section--card-txt-price {
+  padding: 0 15px 0 15px;
   font-weight: 500;
   transform: translateX(0);
   transition: 300ms 50ms;
@@ -293,8 +297,8 @@ h2 {
 }
 
 .progressive_card {
-  -webkit-animation: fadein 3s;
-  animation: fadein 3s;
+  -webkit-animation: fadein 850ms ease-in-out backwards;
+  animation: fadein 850ms ease-in-out backwards;
 }
 .progressive_card--1 {
   -webkit-animation-delay: 0s;
@@ -315,27 +319,21 @@ h2 {
 
 @-webkit-keyframes fadein {
   0% {
-    translate: 0 30px;
+    transform: translateY(30px);
     opacity: 0;
   }
-  50% {
-    opacity: 0.5;
-  }
   100% {
-    translate: 0;
+    transform: translateY(0);
     opacity: 1;
   }
 }
 @keyframes fadein {
   0% {
-    transform: translate(0 30px);
+    transform: translateY(30px);
     opacity: 0;
   }
-  50% {
-    opacity: 0.5;
-  }
   100% {
-    transform: translate(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }

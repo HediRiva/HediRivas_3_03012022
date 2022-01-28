@@ -9,6 +9,15 @@
        
     }
     &__section {
+        &--card {
+            &-txt {
+                &-name {
+                    margin: 0;
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+            }
+        }
         h2 {
             font-weight: 300;
             font-size: 19px;
@@ -17,11 +26,6 @@
             width: 50px;
             margin: 40px 0 20px 17px;
             padding-bottom: 6px;
-        }
-        p {
-            margin: 0;
-            font-size: 14px;
-            font-weight: 300;
         }
     }
 }
