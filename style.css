@@ -259,7 +259,7 @@ h2 {
   transform: rotate(3turn);
 }
 .menu__section--card:hover .menu__section--card-txt-price {
-  transform: translateX(-80px);
+  padding-right: 90px;
 }
 .menu__section--card-txt {
   display: flex;
@@ -273,8 +273,7 @@ h2 {
 .menu__section--card-txt-price {
   padding: 0 15px 0 15px;
   font-weight: 500;
-  transform: translateX(0);
-  transition: 300ms 50ms;
+  transition: 300ms 60ms;
 }
 .menu__section--card-txt-anim {
   position: absolute;
