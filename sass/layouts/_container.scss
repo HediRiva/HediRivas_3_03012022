@@ -74,22 +74,21 @@ h2 {
            margin-left: auto;
            padding: 14px 0 14px 15px;
            @include box-shadow;
+           transition: all 350ms 50ms;
            &-title {
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
            }
            &:hover {
+                padding-right: 90px;
                 .anim-check {
                     transform: translateX(0);
                 }
                 .fa-check-circle {
                     transform: rotate(3turn);
                 }
-                .menu__section--card-txt-price {
-                    padding-right: 90px;
-                }
-            }
+           }  
            &-txt {
                 display: flex;
                 justify-content: space-between;
@@ -101,7 +100,6 @@ h2 {
                 &-price {
                     padding: 0 15px 0 15px;
                     font-weight: 500;
-                    transition: 300ms 60ms;
                 }
                 &-anim {
                     position: absolute;

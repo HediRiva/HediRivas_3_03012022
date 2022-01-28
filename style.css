@@ -246,20 +246,21 @@ h2 {
   margin-left: auto;
   padding: 14px 0 14px 15px;
   box-shadow: 1px 10px 16px 0px rgba(178, 185, 194, 0.75);
+  transition: all 350ms 50ms;
 }
 .menu__section--card-title {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.menu__section--card:hover {
+  padding-right: 90px;
+}
 .menu__section--card:hover .anim-check {
   transform: translateX(0);
 }
 .menu__section--card:hover .fa-check-circle {
   transform: rotate(3turn);
-}
-.menu__section--card:hover .menu__section--card-txt-price {
-  padding-right: 90px;
 }
 .menu__section--card-txt {
   display: flex;
@@ -273,7 +274,6 @@ h2 {
 .menu__section--card-txt-price {
   padding: 0 15px 0 15px;
   font-weight: 500;
-  transition: 300ms 60ms;
 }
 .menu__section--card-txt-anim {
   position: absolute;
