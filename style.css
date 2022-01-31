@@ -576,7 +576,7 @@ h2 {
     margin-left: auto;
     margin-bottom: 30px;
   }
-  .restaurant__bloc-1 div:first-child {
+  .restaurant__bloc-1 article:first-child {
     margin-right: 60px;
   }
   .restaurant__bloc-2 {
@@ -585,7 +585,7 @@ h2 {
     margin-right: auto;
     margin-left: auto;
   }
-  .restaurant__bloc-2 div:first-child {
+  .restaurant__bloc-2 article:first-child {
     margin-right: 60px;
   }
   .restaurant__card {
